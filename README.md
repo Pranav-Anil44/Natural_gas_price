@@ -34,3 +34,12 @@ Daily Interpolation
 Implemented estimate_price("YYYY-MM-DD") function.
 Interpolates between monthly log-prices to estimate daily prices.
 Ensures smoothness and positivity.
+
+
+
+from src.estimator import estimate_price
+import pandas as pd
+
+# Example queries
+print(estimate_price("2023-07-15", full_df))  # Historical mid-month date
+print(estimate_price("2025-05-15", full_df))  # Forecasted mid-month date
